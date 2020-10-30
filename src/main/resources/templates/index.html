@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <title>AJAX post & get</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" th:src="@{/postrequest.js}"></script>
+    <script type="text/javascript" th:src="@{/getrequest.js}"></script>
+
+</head>
+<body>
+
+<div>
+    <h3>Add a person to the list</h3>
+    <div>
+        <form id="personForm">
+            <div >
+                <label for="firstname" >Firstname:</label>
+                <input type="text"  id="firstname" placeholder="Enter FirstName"/>
+            </div>
+            <div >
+                <label for="lastname" >Lastname:</label>
+                <input type="text"  id="lastname" placeholder="Enter LastName"/>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <div id="postResultDiv">
+    </div>
+
+    <div >
+        <button id="getAllPeopleId" type="button" >Get all people</button>
+        <div id="getResultDiv">
+            <ul >
+            </ul>
+        </div>
+    </div>
+</div>
+</body>
+</html>
